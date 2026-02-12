@@ -18,13 +18,13 @@ class AccountsService {
     return created;
   }
 
-  deposit(destinationId: string, amount: number): DepositResult {
+  deposit(destinationId: string, amount: number = 0): DepositResult {
     const dest = this.getOrCreate(destinationId);
     dest.balance += amount;
     return { destination: { id: dest.id, balance: dest.balance } };
   }
 
-  withdraw(originId: string, amount: number): WithdrawResult | null {
+  withdraw(originId: string, amount: number = 0): WithdrawResult | null {
     const origin = accounts[originId];
     if (!origin) return null;
 
@@ -32,7 +32,7 @@ class AccountsService {
     return { origin: { id: origin.id, balance: origin.balance } };
   }
 
-  transfer(originId: string, destinationId: string, amount: number): TransferResult | null {
+  transfer(originId: string, destinationId: string, amount: number = 0): TransferResult | null {
     const origin = accounts[originId];
     if (!origin) return null;
 

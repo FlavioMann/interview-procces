@@ -66,3 +66,5 @@ https://xxxx.ngrok-free.app
 
 Use this URL to access the API externally.
 
+> :link: Postman Collection: https://web.postman.co/workspace/My-Workspace~2f51588e-c2b9-4a31-8704-bf68dab0b99b/collection/17607153-bc3d7a00-9739-43c2-8619-b3533b9f566d?action=share&source=copy-link&creator=17607153
+
